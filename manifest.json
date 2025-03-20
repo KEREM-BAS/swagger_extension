@@ -1,0 +1,19 @@
+{
+    "name": "Swagger Plus",
+    "description": "Adds copy buttons next to Swagger endpoint URLs.",
+    "version": "1.0",
+    "manifest_version": 3,
+    "permissions": ["clipboardWrite"],
+    "content_scripts": [
+      {
+        "matches": ["*://*/*swagger/index.html*"],
+        "js": ["swagger_plus.js"],
+        "run_at": "document_end"
+      }
+    ],
+    "action": {
+      "default_popup": "swagger_plus.html",
+      "default_icon": "swagger_plus_logo.png"
+    }
+  }
+  
